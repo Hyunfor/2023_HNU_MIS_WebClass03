@@ -13,5 +13,11 @@
 노란색으로 나타날까요? <br>
 forward 액션 태그가 실행되면 이 페이지의 내용은 출력되지 않습니다. <br>
 <jsp:forward page="08_yellow.jsp"/>
+
+<%
+// 동일한 형태의 태그 <jsp:forward page="08_yellow.jsp"/>
+// request.getRequestDispatcher("08_yellow.jsp").forward(request, response);
+%>
+
 </body>
 </html>
