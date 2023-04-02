@@ -22,15 +22,15 @@
 			out.println(name + " : " + value + "<br>");
 		}
 		
-		// 이름을 지정하여 세션에 저장된 객체를 제거.
-		session.removeAttribute("s_name2");
+		// 설정된 세션의 값들을 모두 사라지도록 함.
+		session.invalidate();
 				
 		out.print("<h3> >> 세션값을 삭제 한 후 << </h3> ");
-		names = session.getAttributeNames();
-		while(names.hasMoreElements()){
-			String name=names.nextElement().toString();
-			String value=session.getAttribute(name).toString( );
-			out.println(name + " : " + value + "<br>");
+		out.print("Q : 과연 세션 아이디가 유효 할까요?");
+		if(request.isRequestedSessionIdValid() == true){
+			out.print("A : 세션 아이디가 유효 ");
+		} else {
+			out.print("A : 세션 아이디가 유효하지 않음. ");
 		}
 	%>
 </body>
