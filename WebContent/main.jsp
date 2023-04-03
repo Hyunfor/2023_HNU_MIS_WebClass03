@@ -26,7 +26,7 @@
 		저희 홈페이지에 방문해 주셔서 감사합니다.<br>
 		즐거운 시간 되세요....<br>
 		<form method="post" action="logout.jsp">
-			<input type="submit" value="�α׾ƿ�">
+			<input type="submit" value="로그아웃">
 		</form>
 	<%} else { %>
 		<h2>로그인에 실패했습니다.</h2>
